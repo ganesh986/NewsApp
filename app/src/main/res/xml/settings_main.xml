@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="News app settings">
+
+    <PreferenceScreen
+        android:title="Favourite sections">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/sport"
+            android:key="sport"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/politic"
+            android:key="politics"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/technology"
+            android:key="technology"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/business"
+            android:key="business"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/lifestyle"
+            android:key="lifestyle"/>
+
+    </PreferenceScreen>
+
+    <EditTextPreference
+        android:key="max_articles"
+        android:inputType="numberDecimal"
+        android:defaultValue="15"
+        android:title="Set number of articles per section"/>
+
+</PreferenceScreen>

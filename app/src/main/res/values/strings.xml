@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="sport">Sport</string>
+    <string name="politic">Politics</string>
+    <string name="technology">Technology</string>
+    <string name="business">Businnes</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="settings">Settings</string>
+    <string name="settings_menu_item">Settings</string>
+</resources>
