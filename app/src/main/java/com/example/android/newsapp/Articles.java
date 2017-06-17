@@ -1,10 +1,10 @@
 package com.example.android.newsapp;
 
 /**
- * Created by matteo on 14/06/2017.
+ * An {@link Articles} object contains information related to a single Article.
  */
 
-public class Articles {
+public final class Articles {
     private String mTitle;
     private String mDate;
     private String mURL;

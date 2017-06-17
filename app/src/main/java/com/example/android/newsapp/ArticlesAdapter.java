@@ -25,7 +25,7 @@ public class ArticlesAdapter extends ArrayAdapter<Articles> {
 
     public ArticlesAdapter(Activity context, ArrayList<Articles> articles)    {super(context, 0, articles);}
 
-    static class Article {
+    private static class ArticleViewHolder {
         TextView text_title;
         TextView text_published;
         TextView text_argument;
@@ -34,19 +34,19 @@ public class ArticlesAdapter extends ArrayAdapter<Articles> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        
-        Article singleArticle;
+
+        ArticleViewHolder singleArticle;
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.news_item, parent, false);
 
-            singleArticle = new Article();
+            singleArticle = new ArticleViewHolder();
             singleArticle.text_title = (TextView) convertView.findViewById(R.id.title);
             singleArticle.text_published = (TextView) convertView.findViewById(R.id.date);
             singleArticle.text_argument = (TextView) convertView.findViewById(R.id.argument);
             convertView.setTag(singleArticle);
         } else {
-            singleArticle = (Article) convertView.getTag();
+            singleArticle = (ArticleViewHolder) convertView.getTag();
         }
 
         Articles actualArticle = getItem(position);

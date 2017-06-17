@@ -23,7 +23,7 @@ import java.util.List;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by matteo on 14/06/2017.
+ * Helper methods related to requesting and receiving articles data from guardian.
  */
 
 public class ArticlesUtility {
@@ -36,25 +36,25 @@ public class ArticlesUtility {
     }
 
     static HttpURLConnection makeHttpRequest(URL urlConnection)   {
-        HttpURLConnection ArticlesConnection = null;
+        HttpURLConnection articlesConnection = null;
 
         try {
-            ArticlesConnection = (HttpURLConnection) urlConnection.openConnection();
-            ArticlesConnection.setReadTimeout(10000);
-            ArticlesConnection.setConnectTimeout(15000);
-            ArticlesConnection.setRequestMethod("GET");
-            ArticlesConnection.connect();
+            articlesConnection = (HttpURLConnection) urlConnection.openConnection();
+            articlesConnection.setReadTimeout(10000);
+            articlesConnection.setConnectTimeout(15000);
+            articlesConnection.setRequestMethod("GET");
+            articlesConnection.connect();
 
             
-            if (ArticlesConnection.getResponseCode() == 200) {
-                return ArticlesConnection;
+            if (articlesConnection.getResponseCode() == 200) {
+                return articlesConnection;
             }   else    {
-                return ArticlesConnection;
+                return articlesConnection;
             }
         } catch (IOException e) {
             Log.e(TAG, "makeHttpRequest: "+ e.getMessage());
         }
-        return ArticlesConnection;
+        return articlesConnection;
     }
 
     static String getJSONData(HttpURLConnection connection)    {

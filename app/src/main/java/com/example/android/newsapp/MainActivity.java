@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-
+        
         booleanSectionPreferences[0] = settings.getBoolean("sport", false);
         booleanSectionPreferences[1] = settings.getBoolean("politics", false);
         booleanSectionPreferences[2] = settings.getBoolean("technology", false);
